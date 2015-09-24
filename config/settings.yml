@@ -1,0 +1,9 @@
+# LogoClick
+
+plugins:
+  logo_click_enabled:
+    default: true
+    client: true
+  logo_click_target:
+    default: "/"
+    client: true

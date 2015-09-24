@@ -1,0 +1,6 @@
+# LogoClick
+
+en:
+  site_settings:
+    logo_click_enabled: "Enable logo click plugin"
+    logo_click_target: "relative URL where a logo click should go"
