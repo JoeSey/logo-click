@@ -1,6 +1,6 @@
 # name: logo-click
 # about: make the target of the logo click configurable
-# version: 0.0.1
+# version: 0.0.2
 # authors: Joerg Seyfried (JSey)
 # url: https://github.com/JSey/logo-click
 

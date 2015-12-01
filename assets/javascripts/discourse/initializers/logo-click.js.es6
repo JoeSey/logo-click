@@ -1,15 +1,18 @@
 import DiscourseURL from 'discourse/lib/url';
+import HomeLogoComponent from 'discourse/components/home-logo';
+// ToDO import DiscourseLocation from 'discourse/lib/discourse-location';
 
 export default
 {
     name: 'LogoClick',
-    initialize()
+    initialize(container)
     {
-      if (Discourse.SiteSettings.logo_click_enabled)
+      const siteSettings = container.lookup('site-settings:main');
+      if (siteSettings.logo_click_enabled)
       {
-        Discourse.HomeLogoComponent.reopen({
+        HomeLogoComponent.reopen({
           linkUrl: function() {
-              return Discourse.getURL(Discourse.SiteSettings.logo_click_target);
+              return Discourse.getURL(siteSettings.logo_click_target);
           }.property(),
           
           click: function(e) {
@@ -18,7 +21,7 @@ export default
 
             e.preventDefault();
 
-            DiscourseURL.routeTo(Discourse.SiteSettings.logo_click_target);
+            DiscourseURL.routeTo(siteSettings.logo_click_target);
             return false;
           }
          });
